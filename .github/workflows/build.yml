@@ -5,17 +5,6 @@ on: [push]
 env:
   AZURE_WEBAPP_NAME: "KK Test App"   # set this to your application's name
   NODE_VERSION: '14.x'                # set this to the node version to use
-
-on:
-  pull_request:
-    paths-ignore:
-      - '**.md'    
-  push:    
-    branches:
-      - main
-      - releases/*
-    paths-ignore:
-      - '**.md'
       
 jobs:
   build-and-deploy:
