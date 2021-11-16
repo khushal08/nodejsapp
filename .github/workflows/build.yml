@@ -1,6 +1,16 @@
 name: JavaScript CI
 
-on: [push]
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Manual push'
+        required: true
+        default: 'Batman'
+      home:
+        description: 'location'
+        required: false
+        default: 'Gotham City'
 
 env:
   AZURE_WEBAPP_NAME: "KK Test App"   # set this to your application's name
